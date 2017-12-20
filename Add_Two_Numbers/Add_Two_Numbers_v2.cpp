@@ -16,7 +16,7 @@ public:
             int sum = (l1? l1->val: 0) + (l2? l2->val: 0) + C;
             C = sum / 10;
             p->next = new ListNode(sum % 10);
-            p = p->next; l1 = l1->next; l2 = l2->next;
+            p = p->next; l1 = (l1? l1->next: NULL); l2 = (l2? l2->next: NULL);
         }
         return preHead.next;
     }
